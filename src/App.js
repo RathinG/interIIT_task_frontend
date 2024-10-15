@@ -1,23 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from './components/Sidebar';
+import ItemDetails from './components/ItemDetails';
+import "../src/styles/styles.css";
+import React, {useState} from 'react';
+
+
 
 function App() {
+
+  const [selectedItem, setSelectedItem] = useState(null);
+
+  const handleSelectItem = (item) => {
+    setSelectedItem(item);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+       <Sidebar onSelectItem={handleSelectItem} />
+       <ItemDetails selectedItem={selectedItem} />
+
     </div>
   );
 }

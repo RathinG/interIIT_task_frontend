@@ -1,0 +1,130 @@
+/* General app layout */
+.App {
+  display: flex;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 25%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-right: 1px solid #e0e0e0;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h3 {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.sidebar h3:hover {
+  color: #1e90ff;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.sidebar li {
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #555;
+  padding: 5px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar li:hover {
+  background-color: #f1f9ff;
+  color: #1e90ff;
+  padding-left: 10px;
+  border-radius: 4px;
+}
+
+/* Item details section */
+.item-details {
+  padding: 40px;
+  width: 75%;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 40px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.item-details h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1e90ff;
+}
+
+.item-details p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.item-details p:last-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* General text styling */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+}
+
+h2, h3 {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Scrollbar customization */
+.sidebar {
+  overflow-y: auto;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .item-details {
+    width: calc(100% - 80px);
+    margin: 20px;
+  }
+}

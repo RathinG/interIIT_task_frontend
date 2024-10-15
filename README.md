@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+Deployment link : https://inter-iit-task-frontend-42kagofi8-rathin-ghoshs-projects.vercel.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
